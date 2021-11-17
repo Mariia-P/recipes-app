@@ -77,7 +77,7 @@ const App = () => {
                             }
                         />
                         <Route
-                            path="/"
+                            path="*"
                             exact
                             element={
                                 <div className="recipie__content">
