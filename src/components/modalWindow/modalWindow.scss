@@ -1,0 +1,144 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transform: scale(0);
+    &.active {
+        transform: scale(1);
+    }
+
+    h2 {
+        margin-top: 1rem;
+    }
+
+    &__content {
+        width: 40vw;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background-color: #fff;
+        transform: scale(0.5);
+        transition: 0.4s all;
+
+        &.active {
+            transform: scale(1);
+        }
+    }
+
+    &__close {
+        width: 66px;
+        height: 6px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5em;
+        color: #aaa;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    &__close-icon {
+        width: 30px;
+    }
+}
+
+.form {
+    display: grid;
+    gap: 25px;
+    padding-top: 1rem;
+
+    &__textarea-wrepper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__icon {
+        position: absolute;
+        bottom: 11px;
+        right: 17px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.4s all;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__ingridient-wrapper {
+        position: relative;
+    }
+    input {
+        height: 45px;
+        width: 320px;
+        border: 1px solid #dcdcdc;
+        border-radius: 5px;
+        outline: none;
+        padding-left: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #4d4c49;
+        text-align: left;
+    }
+    textarea {
+        border: 1px solid #dcdcdc;
+        outline: none;
+        font-size: 16px;
+        color: #4d4c49;
+        border-radius: 5px;
+    }
+
+    &__button-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 320px) {
+    .modal {
+        &__content {
+            width: 70vw;
+        }
+
+        &__close {
+            width: 35px;
+            top: -5px;
+        }
+    }
+
+    .form {
+        input {
+            width: 210px;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .form {
+        input {
+            width: 320px;
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    .modal {
+        &__content {
+            width: 40vw;
+        }
+
+        &__close {
+            width: 63px;
+            top: 9px;
+        }
+    }
+}

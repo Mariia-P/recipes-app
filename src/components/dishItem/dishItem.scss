@@ -1,0 +1,111 @@
+@import '../../style/variables.scss';
+.dish {
+    &__item {
+        width: 200px;
+        height: 318px;
+        background-color: $dark;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        padding: 15px;
+        font-size: 1rem;
+        transition: 0.3s transform;
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            transform: translate(-15px, -15px);
+            cursor: pointer;
+            transition: box-shadow 500ms ease;
+
+            &:hover {
+                box-shadow: 0 5px 20px $main-color;
+            }
+        }
+        &_selected {
+            box-shadow: 0 5px 20px $main-color;
+            transform: translateY(-8px);
+        }
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__info-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 99px;
+        justify-content: space-between;
+    }
+}
+.btn-trash {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: #e5383b;
+    cursor: pointer;
+
+    &:hover {
+        color: #e5383b6e;
+    }
+}
+
+@media (min-width: 320px) {
+    .dish {
+        &__item {
+            width: 100px;
+            height: 230px;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        &__name {
+            font-size: 15px;
+            line-height: 17px;
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .dish {
+        &__item {
+            width: 150px;
+            height: 230px;
+
+            img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .dish {
+        &__item {
+            width: 200px;
+            height: 318px;
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        &__name {
+            font-size: 22px;
+            line-height: 29px;
+        }
+    }
+}

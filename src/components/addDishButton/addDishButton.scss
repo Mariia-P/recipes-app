@@ -1,0 +1,23 @@
+.addDishButton{
+   
+    background-color:rgba(214, 8, 8, 0.472);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 5;
+    width: 4rem ;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.25); ;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 
+        transform 500ms ease;
+   
+
+&:hover{
+    transform: scale(1.2);
+}
+
+}

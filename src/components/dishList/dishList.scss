@@ -1,0 +1,64 @@
+@import '../../style/variables.scss';
+
+.dish {
+    &__content {
+        position: relative;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 650px 425px;
+        column-gap: 25px;
+        align-items: start;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        column-gap: 25px;
+        row-gap: 30px;
+    }
+
+    &__list-empty {
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+    }
+}
+
+@media (min-width: 320px) {
+    .dish {
+        &__content {
+            grid-template-columns: 50% 50%;
+            column-gap: 11px;
+            justify-items: center;
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    .dish {
+        &__content {
+            grid-template-columns: 40% 60%;
+            column-gap: 40px;
+        }
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .dish {
+        &__content {
+            grid-template-columns: 650px 425px;
+            column-gap: 25px;
+            align-items: start;
+        }
+        &__grid {
+            grid-template-columns: repeat(3, 200px);
+        }
+    }
+}
